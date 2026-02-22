@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Boutique Pantalons</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #1a0033, #000814);
+    color: white;
+}
+
+/* HEADER */
+header {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #c77dff;
+    box-shadow: 0 0 15px #6a0dad;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    margin: 40px auto;
+}
+
+/* FORM */
+.form-card {
+    background: rgba(20,20,40,0.8);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #3c096c;
+    margin-bottom: 40px;
+}
+
+.form-card h2 {
+    color: #9d4edd;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    background: #1e1e2f;
+    color: white;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #7b2cbf;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #9d4edd;
+    transform: scale(1.05);
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(15,15,30,0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px #240046;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background: #240046;
+    color: #c77dff;
+}
+
+tr:nth-child(even) {
+    background: #1a1a2e;
+}
+
+.action-btn {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit {
+    background: #4361ee;
+    color: white;
+}
+
+.delete {
+    background: #d90429;
+    color: white;
+}
+
+.edit:hover {
+    background: #4895ef;
+}
+
+.delete:hover {
+    background: #ef233c;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    👖 ADMIN - Gestion des Pantalons
+</header>
+
+<div class="container">
+
+    <!-- FORMULAIRE -->
+    <div class="form-card">
+        <h2>Ajouter un nouveau pantalon</h2>
+
+        <input type="text" placeholder="Nom du pantalon">
+        <select>
+            <option>Taille S</option>
+            <option>Taille M</option>
+            <option>Taille L</option>
+            <option>Taille XL</option>
+        </select>
+        <input type="number" placeholder="Prix (FCFA)">
+        <input type="number" placeholder="Stock disponible">
+
+        <button>Ajouter au catalogue</button>
+    </div>
+
+    <!-- TABLEAU -->
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Taille</th>
+            <th>Prix</th>
+            <th>Stock</th>
+            <th>Actions</th>
+        </tr>
+
+        <tr>
+            <td>Jean Slim Noir</td>
+            <td>M</td>
+            <td>25 000 FCFA</td>
+            <td>12</td>
+            <td>
+                <button class="action-btn edit">Modifier</button>
+                <button class="action-btn delete">Supprimer</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Pantalon Cargo Beige</td>
+            <td>L</td>
+            <td>30 000 FCFA</td>
+            <td>8</td>
+            <td>
+                <button class="action-btn edit">Modifier</button>
+                <button class="action-btn delete">Supprimer</button>
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+</html>
